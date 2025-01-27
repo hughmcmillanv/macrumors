@@ -44,7 +44,6 @@ export default function Command() {
 function StoryListItem(props: { item: Parser.Item; index: number }) {
   const icon = getIcon(props.index + 1);
   const pubDate = getPubDate(props.item);
-  const commentsLink = props.item.guid;
 
   return (
     <List.Item

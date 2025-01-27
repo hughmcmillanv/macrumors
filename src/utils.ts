@@ -25,4 +25,3 @@ export function getPubDate(item: Parser.Item) {
   const pubDate = item.pubDate;
   return pubDate ? pubDate.split(" ").slice(0, 4).join(" ") : undefined;
 }
-
