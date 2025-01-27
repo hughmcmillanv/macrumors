@@ -3,7 +3,7 @@
   "name": "macrumors",
   "title": "MacRumors",
   "description": "Browse MacRumors headlines from the comfort of Raycast.",
-  "icon": "extension-icon.png",
+  "icon": "macrumors-extension-icon.png",
   "author": "hughmcmillanv",
   "categories": [
     "News"

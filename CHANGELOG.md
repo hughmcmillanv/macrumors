@@ -1,3 +1,5 @@
 # MacRumors Changelog
 
-## [Initial Version] - {PR_MERGE_DATE}
+## [Initial Version] - 2025-1-27
+
+Initial version code

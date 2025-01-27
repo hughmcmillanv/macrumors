@@ -16,7 +16,7 @@ export default function Command() {
         setState({ items: feed.items });
       } catch (error) {
         setState({
-          error: error instanceof Error ? error : new Error("Something went wrong"),
+          error: error instanceof Error ? error : new Error("Something went wrong."),
         });
       }
     }
@@ -29,7 +29,7 @@ export default function Command() {
   if (state.error) {
     showToast({
       style: Toast.Style.Failure,
-      title: "Failed loading stories",
+      title: "Failed loading stories.",
       message: state.error.message,
     });
   }
@@ -44,6 +44,7 @@ export default function Command() {
 function StoryListItem(props: { item: Parser.Item; index: number }) {
   const icon = getIcon(props.index + 1);
   const pubDate = getPubDate(props.item);
+  const commentsLink = props.item.guid;
 
   return (
     <List.Item
@@ -64,7 +65,7 @@ function Actions(props: { item: Parser.Item }) {
         {props.item.link && (
           <Action.CopyToClipboard
             content={props.item.link}
-            title="Copy Link"
+            title="Copy Article Link"
             shortcut={{ modifiers: ["cmd"], key: "." }}
           />
         )}
